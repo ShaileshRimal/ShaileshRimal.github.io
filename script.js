@@ -1,7 +1,7 @@
 let particles = [];
 
 function setup() {
-  createCanvas(1000, 1000);
+  createCanvas(windowWidth, windowHeight);
   for (let i = 0; i < 100; i++) {
     particles.push(new Particle());
   }
@@ -15,6 +15,10 @@ function draw() {
   }
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 class Particle {
   constructor() {
     this.x = random(width);
@@ -22,7 +26,7 @@ class Particle {
     this.vx = 0;
     this.vy = 0;
     this.r = random(5, 15);
-    this.color = color(random(255), random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255), random(255), random(100, 200));
+    this.color = color(random(255), random(255), random(255), random(100, 200));
   }
   
   update() {
