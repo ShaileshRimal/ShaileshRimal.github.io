@@ -17,8 +17,8 @@ function draw() {
 
 class Particle {
   constructor() {
-    this.x = random(width);
-    this.y = random(height);
+    this.x = random(windowwidth);
+    this.y = random(windowheight);
     this.vx = 0;
     this.vy = 0;
     this.r = random(5, 15);
