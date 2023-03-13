@@ -15,10 +15,6 @@ function draw() {
   }
 }
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
-
 class Particle {
   constructor() {
     this.x = random(width);
