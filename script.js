@@ -1,18 +1,22 @@
 let particles = [];
 
 function setup() {
-  createCanvas(1000, 1000);
+  createCanvas(windowWidth, windowHeight);
   for (let i = 0; i < 100; i++) {
     particles.push(new Particle());
   }
 }
 
 function draw() {
-  background(25, 25, 26
+  background(255, 255, 200);
   for (let i = 0; i < particles.length; i++) {
     particles[i].update();
     particles[i].show();
   }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 class Particle {
@@ -22,14 +26,14 @@ class Particle {
     this.vx = 0;
     this.vy = 0;
     this.r = random(5, 15);
-    this.color = color(random(255), random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255),random(255), random(255), random(100, 200));
+    this.color = color(random(255), random(255), random(255), random(100, 200));
   }
   
   update() {
     let dx = mouseX - this.x;
     let dy = mouseY - this.y;
     let dist = sqrt(dx*dx + dy*dy);
-    let acc = dist < 50 ? 50 : 0;
+    let acc = dist < 50 ? 1 : 0;
     this.vx += dx * 0.0005 * acc;
     this.vy += dy * 0.0005 * acc;
     this.vx *= 0.95;
