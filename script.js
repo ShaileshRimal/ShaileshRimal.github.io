@@ -1,7 +1,7 @@
 let particles = [];
 
 function setup() {
-  createCanvas(width, height);
+  createCanvas(windowWidth, windowHeight);
   for (let i = 0; i < 100; i++) {
     particles.push(new Particle());
   }
@@ -17,8 +17,8 @@ function draw() {
 
 class Particle {
   constructor() {
-    this.x = random(windowwidth);
-    this.y = random(windowheight);
+    this.x = random(width);
+    this.y = random(height);
     this.vx = 0;
     this.vy = 0;
     this.r = random(5, 15);
