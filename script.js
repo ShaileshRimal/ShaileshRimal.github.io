@@ -25,7 +25,7 @@ class Particle {
     this.y = random(height);
     this.vx = 0;
     this.vy = 0;
-    this.r = random(5, 15);
+    this.r = random(10, 30);
     this.color = color(random(255), random(255), random(255), random(100, 200));
   }
   
@@ -34,7 +34,7 @@ class Particle {
     let dy = mouseY - this.y;
     let dist = sqrt(dx*dx + dy*dy);
     let acc = dist < 50 ? 50 : 0;
-    this.vx += dx * 50 * acc;
+    this.vx += dx * 0.0005 * acc;
     this.vy += dy * 0.0005 * acc;
     this.vx *= 0.95;
     this.vy *= 0.95;
