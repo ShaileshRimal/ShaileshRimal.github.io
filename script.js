@@ -25,7 +25,7 @@ class Particle {
     this.y = random(height);
     this.vx = 0;
     this.vy = 0;
-    this.r = random(10, 30);
+    this.r = random(30, 50);
     this.color = color(random(255), random(255), random(255), random(100, 200));
   }
   
