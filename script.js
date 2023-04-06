@@ -34,7 +34,7 @@ class Particle {
     let dy = mouseY - this.y;
     let dist = sqrt(dx*dx + dy*dy);
     let acc = dist < 50 ? 50 : 0;
-    this.vx += dx * 0.0005 * acc;
+    this.vx += dx * 50 * acc;
     this.vy += dy * 0.0005 * acc;
     this.vx *= 0.95;
     this.vy *= 0.95;
